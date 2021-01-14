@@ -1,0 +1,12 @@
+%h1
+  = @playlist&.name || "All Songs"
+  = link_to "PLAY", nil, class: 'btn green', data: { action: "player#next" }
+
+%table.table.table-hover.songs
+  %thead
+    %tr
+      %th
+      %th Title
+      %th Artist
+  %tbody
+    = render @songs

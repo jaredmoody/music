@@ -1,0 +1,36 @@
+@import "bootstrap"
+@import "font-awesome-sprockets"
+@import "font-awesome"
+
+@import "player"
+
+html
+  height: 100%
+
+body
+  display: flex
+  height: 100%
+
+  & > aside, main
+    padding: 2 * $spacer
+    height: 100%
+    overflow-y: auto
+
+  & > aside
+    background-color: #CCC
+
+table.songs
+  td
+    vertical-align: middle
+
+  td.play
+    font-size: 1.5em
+    width: 3em
+    padding: 0
+    text-align: center
+
+  tr.current
+    background-color: aliceblue
+
+[data-hover-target='hover']
+  display: none

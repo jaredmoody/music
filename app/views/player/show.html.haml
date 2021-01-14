@@ -1,0 +1,18 @@
+= turbo_frame_tag "player_frame" do
+  %section#player.fixed-bottom
+    %figure
+      = icon("fas", "record-vinyl", class: "fa-fw")
+      %figcaption
+        = @song.title
+        %br
+        %small= @song.artist.name
+
+    %section#controls
+      = link_to icon("fas", "step-backward"), nil, data: { action: "player#prev" }
+      = link_to icon("far", "pause-circle"), nil, data: { action: "player#togglePause" }
+      = link_to icon("fas", "step-forward"), nil, data: { action: "player#next" }
+
+    %section#other
+      Volume
+      %audio{ autoplay: true, data: { action: "ended->player#next", player_target: 'audio' } }
+        %source{ src: song_path(@song) }
