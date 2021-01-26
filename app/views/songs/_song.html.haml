@@ -1,7 +1,7 @@
-%tr{ data: { controller: "hover clickable_row", url: player_path(song),
+%tr{ data: { controller: "", url: player_path(song),
              turbo_frame: "player_frame", player_target: "song", song_id: song.id } }
   %td.play
     = link_to icon("far", "play-circle"), player_path(song),
-              data: { hover_target: "hover", turbo_frame: "player_frame", action: "player#playing" }
+              data: { turbo_frame: "player_frame", action: "player#playing" }
   %td= song.title
   %td= song.artist.name

@@ -29,8 +29,15 @@ table.songs
     padding: 0
     text-align: center
 
+    a
+      text-decoration: none
+      color: inherit
+
+    i
+      display: none
+
+  tr:hover td.play i
+    display: inline
+
   tr.current
     background-color: aliceblue
-
-[data-hover-target='hover']
-  display: none
