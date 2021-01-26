@@ -9,4 +9,4 @@
       %th Title
       %th Artist
   %tbody
-    = render @songs
+    = render partial: 'songs/song', collection: @songs, cached: true
