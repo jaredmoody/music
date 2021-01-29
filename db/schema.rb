@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_12_28_055142) do
   create_table "playlist_songs", force: :cascade do |t|
     t.integer "playlist_id", null: false
     t.integer "song_id", null: false
-    t.integer "priority", null: false
+    t.integer "position", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["playlist_id"], name: "index_playlist_songs_on_playlist_id"
