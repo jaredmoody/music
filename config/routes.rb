@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :playlists
+  resources :playlists do
+    resources :songs, controller: 'playlist_songs'
+  end
+
   resources :songs
   resources :artists
 

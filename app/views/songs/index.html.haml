@@ -1,12 +1,14 @@
-%h1
-  = @playlist&.name || "All Songs"
-  = link_to "PLAY", nil, class: 'btn green', data: { action: "player#next" }
+%article{ class: playlist_class(@playlist), data: @playlist ? playlist_data(@playlist) : {} }
+  %h1
+    = @playlist&.name || "All Songs"
+    = link_to "PLAY", nil, class: 'btn green', data: { action: "player#next" }
 
-%table.table.table-hover.songs
-  %thead
-    %tr
-      %th
-      %th Title
-      %th Artist
-  %tbody
-    = render partial: 'songs/song', collection: @songs, cached: true
+  %table.table.table-hover.songs
+    %thead
+      %tr
+        %th
+        %th Title
+        %th Artist
+        %th
+    %tbody
+      = render partial: 'songs/song', collection: @songs, cached: true

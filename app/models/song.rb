@@ -23,4 +23,8 @@ class Song < ApplicationRecord
   def album_name=(name)
     self.album = Album.find_or_create_by!(title: title)
   end
+
+  def song
+    self
+  end
 end

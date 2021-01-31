@@ -15,7 +15,7 @@ class PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.find(params[:id])
-    @songs = @playlist.songs
+    @songs = @playlist.playlist_songs.includes(:song)
 
     render 'songs/index'
   end

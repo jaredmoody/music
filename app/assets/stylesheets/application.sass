@@ -29,15 +29,19 @@ table.songs
     padding: 0
     text-align: center
 
-    a
-      text-decoration: none
-      color: inherit
+  a
+    text-decoration: none
+    color: inherit
 
-    i
-      display: none
+  i
+    display: none
 
   tr:hover td.play i
     display: inline
 
   tr.current
     background-color: aliceblue
+
+article.playlist table.songs tr:hover td
+  i.fa-trash-alt
+    display: inline
