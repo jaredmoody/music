@@ -1,0 +1,6 @@
+= turbo_stream.append "songs" do
+  = render partial: 'songs/song', collection: @songs, cached: true
+
+- if @pagy.next
+  = turbo_stream.replace "song_loader" do
+    = turbo_frame_tag "song_loader", target: "songs", src: songs_path(page: @pagy.next)

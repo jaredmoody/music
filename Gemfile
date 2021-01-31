@@ -41,3 +41,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "acts_as_list", "~> 1.0"
+
+gem "pagy", "~> 3.10"

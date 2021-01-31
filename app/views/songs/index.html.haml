@@ -10,5 +10,8 @@
         %th Title
         %th Artist
         %th
-    %tbody
+    %tbody#songs
       = render partial: 'songs/song', collection: @songs, cached: true
+
+= turbo_frame_tag "song_loader", target: "songs",
+                  src: @playlist ? playlist_path(page: @pagy.next) : songs_path(page: @pagy.next)
